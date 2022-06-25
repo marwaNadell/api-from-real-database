@@ -488,17 +488,6 @@ if(shat5==1 && shat6==1){
 //start of search engene
 
 
-
-
-
-
-
-
-
-
-
-
-
 let realtimeapi=document.getElementById("realtimeapi");
 let thearr=[];
 let cartona2=``;
@@ -509,7 +498,7 @@ let cartona2=``;
   
 document.getElementById("tocontroltherow").innerHTML=` `;
 let vall=realtimeapi.value;
-if(event.keyCode==8){vall="";  thearr=[];cartona2=``; return 0;}
+if(event.keyCode ==8){vall="";  thearr=[];cartona2=``; return 0;}
 var kika=0;
 
 
@@ -520,7 +509,7 @@ async function togetapi(themoviename){
     themoviename=themoviename.toLowerCase();
     themoviename=themoviename.trim();
     let re = new RegExp(`\^(${themoviename})\$`);
-    let re2=new RegExp(`\^(${themoviename})`);
+    let re2=new RegExp(`(${themoviename})`);
  
 for(let ii=1;ii<=1000;ii++){
     let req=await fetch(`https://api.themoviedb.org/3/movie/popular?page=${ii}&api_key=eba8b9a7199efdcb0ca1f96879b83c44&fbclid=IwAR2nGZbXyhVaykqJkEoUqs7qEmMXkl5XU-sgq19_QtrZcWLyKtuNZFN7oh8`);
@@ -558,10 +547,49 @@ cartona2+=`
 $(".row").prepend(cartona2);
 cartona2=``;
  kika=1;
+
+for(let v=0;v<1000;v++){
+    if(re2.test(thedata.results[i].original_title.toLowerCase())){
+
+        
+        if(! thearr.includes(thedata.results[i].id)){
+             thearr.push(thedata.results[i].id)
+
+          
+            
+
+
+let togetimg=`https://image.tmdb.org/t/p/w500${thedata.results[i].backdrop_path}`
+cartona2+=`
+<div class="col-md-4 gy-5">
+    <div class="thecard text-center" >
+        
+        <img src="${togetimg}" alt="" class="w-100 h-100">
+        <div class="thedesc">
+
+<div class="thecontentofdesc fs-10 py-3">${thedata.results[i].original_title}</div>
+<div class="thecontentofdesc">${thedata.results[i].overview}</div>
+<div class="thecontentofdesc py-3">rate:${thedata.results[i].vote_average}</div>
+<div class="thecontentofdesc py-3">${thedata.results[i].release_date}</div>
+</div>
+</div>
+</div>
+
+`;
+$(".row").append(cartona2);
+cartona2=``;
+
+        } 
+//xxxxxxxxxxxxxxxxxxxxxx
+
+    }
+
+}
+
         } 
           
   //xxxxxxxxxxxxxxxxxxxxxx
-    }else if(re2.test(thedata.results[i].original_title.toLowerCase())&&kika==1){
+    }else if(re2.test(thedata.results[i].original_title.toLowerCase())&&kika==1 ){
 
         if(! thearr.includes(thedata.results[i].id)){
              thearr.push(thedata.results[i].id)
@@ -605,6 +633,8 @@ cartona2=``;
 
 
 });
+
+
 
 
 
