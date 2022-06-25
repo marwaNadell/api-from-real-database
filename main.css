@@ -1,0 +1,259 @@
+*{
+
+    padding: 0px;
+    margin: 0px;
+    }
+    :root{
+    --mainColor:black;
+    --secondColor:white;
+    }
+    body{
+        background-color: var(--mainColor);
+    }
+    
+    /*sidenav*/
+    .thelastred:hover{
+    
+      color:rgba(255, 0, 0, 0.368);
+    }
+    .themother{
+    
+    width:30%;
+    position: fixed;
+    top: 0px;
+    left:0%;
+    background-color: red;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    }
+    .thetaps{
+    width:75%;
+    height: 100%;
+    background-color:var(--mainColor);
+    padding: 6px;
+    
+    }
+    .thetaps button{
+    
+    border: none;
+    background-color: var(--mainColor);
+    color: var(--secondColor);
+    padding: 6px;
+    transition: all 1s;
+    
+    
+    }
+    .thetaps button:hover{
+    
+    color:red;
+    }
+    .theico{
+    width:25%;
+    height: 100%;
+    background-color: var(--secondColor);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    }
+    .theico div{
+    
+    width:100%
+    }
+    .thebuttonstotop{
+    
+    height: 50%;
+    
+    overflow: hidden;
+    position: relative;
+    }
+    
+    .toup1,.toup2,.toup3,.toup4,.toup5,.toup6{
+    position: absolute;
+    left: 0px;
+    bottom:-10% ;
+    } 
+    
+    .thecopyright{
+    
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    
+    }
+    /* end of sidenav*/
+    
+    
+    /*start of card*/
+    .thecard{
+    
+        height:550px;
+     
+        background-position: center;
+        background-size: 100% 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 3px;
+    }
+    .thedesc{
+    
+        background-color: rgba(255, 255, 255, 0.623);
+        color:black;
+        position: absolute;
+        top: 100%;
+        height: 100%;
+        left:0px;
+        right: 0px;
+        transition: all 1s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+    
+    }
+    .thecontentofdesc{
+    
+        width:100%;
+    }
+    .thecard:hover .thedesc{
+    
+        top: 0%;
+    }
+    .fs-10{
+    
+        font-size: 30px;
+    }
+    /* the end of card*/
+    
+    
+    
+    /*start of form*/
+    
+    
+    .thewido{
+        width: 75%;
+        margin: auto;
+        height:auto
+    }
+    .totheflex{
+        height:auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content:space-between;
+    }
+    .totheflex input{
+        display: block;
+        width:48%;
+        border: none;
+        color: white;
+        border-bottom: 1px solid rgba(245, 245, 245, 0.73);
+        background-color: black;
+        outline: none;
+        
+    }
+    .thefifty{
+        width:48%;
+        height: 45%;
+        display:none;
+    }
+    
+    .thereddiv{
+        background-color: #f5c6cb;
+        color: #721c24;
+        border: 0px 0px 3px 3px;
+        padding:6px;
+    
+    }
+    
+     .thewido ::-webkit-input-placeholder {
+      text-align: center;
+    }
+    
+    .thewido :-moz-placeholder {
+      text-align: center;
+    }
+    
+    .thewido2{
+        width: 75%;
+        margin: auto;
+        height:auto;
+    }
+    .thewido2 button{
+    
+        background-color: transparent;
+        color: rgba(255, 0, 0, 0.565);
+        border: 1px solid rgba(255, 0, 0, 0.565);
+        padding: 9px;
+        border-radius: 3px;
+        margin-top: 20px;
+    }
+    /*start the engine*/
+    
+    #realtimeapi,#realtimeapi2{
+         border: none;
+        color: white;
+        border-bottom: 1px solid rgba(245, 245, 245, 0.73);
+        background-color: black;
+        outline: none;
+        padding: 10px;
+    
+        }
+    
+    
+        .thetopengene ::-webkit-input-placeholder {
+      text-align: center;
+    }
+    
+    .thetopengene :-moz-placeholder {
+      text-align: center;
+    }
+    .thecard{
+    
+    height:550px;
+    
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    }
+    .thedesc{
+    
+    background-color: rgba(255, 255, 255, 0.623);
+    color:black;
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    left:0px;
+    right: 0px;
+    transition: all 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    
+    }
+    .thecontentofdesc{
+    
+    width:100%;
+    }
+    .thecard:hover .thedesc{
+    
+    top: 0%;
+    }
+    .fs-10{
+    
+    font-size: 30px;
+    }
+    
+    
+    
+    
+    
+    
+    /*end of form*/
